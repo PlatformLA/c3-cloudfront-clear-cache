@@ -1,7 +1,8 @@
 {
-  "name": "digitalcube/c3-cloudfront-clear-cache",
-  "version": "0.0.0",
+  "name": "PlatformLA/c3-cloudfront-clear-cache",
+  "version": "01.0.0",
   "type": "wordpress-plugin",
+  "homepage": "https://github.com/PlatformLA/c3-cloudfront-clear-cache",
   "require": {
     "php": ">=5.5"
   },
