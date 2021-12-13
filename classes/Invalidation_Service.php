@@ -281,7 +281,12 @@ class Invalidation_Service {
 		if ( is_wp_error( $options ) ) {
 			return $options;
 		}
+
 		$query = $this->invalidation_batch->create_batch_by_posts( $home_url, $options['distribution_id'], $posts );
+
+		// BD:
+		//$query = $this->invalidation_batch->create_batch_for_all( $options['distribution_id'] );
+
 		return $query;
 	}
 

@@ -59,4 +59,9 @@ class Environment extends WP\Environment {
 	public function get_aws_secret_key() {
 		return $this->aws_secret_key;
 	}
+
+	private $home_root_url = '/';
+	public function get_home_root_url() {
+		return $this->home_root_url;
+	}
 }

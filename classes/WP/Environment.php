@@ -122,4 +122,16 @@ class Environment {
 		return version_compare( $supported_version, $version, '<=' );
 	}
 
+	/**
+	 * Get the home root url if defined
+	 *
+	 * @return string|null
+	 */
+	public function get_home_root_url() {
+
+		if ( defined( 'C3_HOME_ROOT_URL' ) ) {
+			return C3_HOME_ROOT_URL;
+		}
+		return null;
+	}
 }

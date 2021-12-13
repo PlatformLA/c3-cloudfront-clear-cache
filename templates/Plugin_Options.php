@@ -19,7 +19,7 @@ if ( $env->is_amimoto_managed() ) {
 	 */
 	return;
 }
-
+$env_home_root_url   = $env->get_home_root_url();
 $env_distribution_id = $env->get_distribution_id();
 $env_access_key      = $env->get_aws_access_key();
 $env_secret_key      = $env->get_aws_secret_key();
@@ -98,6 +98,27 @@ $has_ec2_instance_role = apply_filters( 'c3_has_ec2_instance_role', false );
 				</td>
 			</tr>
 		<?php } ?>
+
+		<tr>
+			<td>
+				<?php _e( 'Home Root Folder', $text_domain ); ?>
+			</td>
+			<td>
+				<input
+					class='regular-text code'
+					type="text"
+					name="<?php echo Constants::OPTION_NAME . '[root_home_url]'; ?>"
+					value="<?php echo esc_attr( isset( $env_home_root_url ) ? $env_home_root_url : '/' ); ?>"
+				/>
+				<?php
+				if ( isset( $env_distribution_id ) ) {
+					echo '<p><small>' . __( 'Usually “/”, but could be “/blog” for example.', $text_domain ) . '</small></p>';
+				}
+
+				?>
+			</td>
+		</tr>
+
 	</tbody></table>
 	<?php
 	if ( ! isset( $env_distribution_id ) || ! isset( $env_secret_key ) || ! isset( $env_secret_key ) ) {

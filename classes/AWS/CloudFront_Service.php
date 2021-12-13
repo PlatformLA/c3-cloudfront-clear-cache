@@ -253,4 +253,29 @@ class CloudFront_Service {
 		}
 		return array();
 	}
+
+
+	/**
+	 * Get the target CloudFront home root url
+	 *
+	 * @return string home root url
+	 */
+	public function get_home_root_url() {
+		/**
+		 * Try to find the id from the defined values.
+		 */
+		$from_defined_value = $this->env->get_home_root_url();
+		if ( $from_defined_value ) {
+			return $from_defined_value;
+		}
+
+		/**
+		 * Then, load the wp_option table to get the saved id
+		 */
+		$options = $this->options_service->get_options();
+		if ( $options && $options['home_root_url'] ) {
+			return $options['home_root_url'];
+		}
+
+	}
 }
