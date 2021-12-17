@@ -14,6 +14,15 @@ use C3_CloudFront_Cache_Controller\Constants;
 $text_domain = Constants::text_domain();
 ?>
 <div class='wrap' id='c3-dashboard'>
+
+<?php
+
+	$debug = print_r(error_get_last(),true);
+	echo '<h1>ERROR LOGGING</h1>';
+	echo '<p>php-error: '.esc_attr($debug).'</p>';
+?>
+
+
 <?php
 	$title = '<h2>' . __( 'C3 Cloudfront Cache Controller', $text_domain ) . '</h2>';
 	echo apply_filters( 'c3_after_title', $title );
