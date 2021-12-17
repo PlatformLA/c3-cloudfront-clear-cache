@@ -16,10 +16,10 @@ $text_domain = Constants::text_domain();
 <div class='wrap' id='c3-dashboard'>
 
 <?php
-
+/*
 	$debug = print_r(error_get_last(),true);
 	echo '<h1>ERROR LOGGING</h1>';
-	echo '<p>php-error: '.esc_attr($debug).'</p>';
+	echo '<p>php-error: '.esc_attr($debug).'</p>';*/
 ?>
 
 
