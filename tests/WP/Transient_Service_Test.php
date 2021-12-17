@@ -2,7 +2,7 @@
 namespace C3_CloudFront_Cache_Controller\Test\WP;
 use C3_CloudFront_Cache_Controller\WP;
 
-class Transiend_Service_Test extends \WP_UnitTestCase {
+class Transient_Service_Test extends \WP_UnitTestCase {
     private $target;
     public function setUp() {
         parent::setUp();
@@ -19,7 +19,7 @@ class Transiend_Service_Test extends \WP_UnitTestCase {
     public function provide_query_normalize_test_case() {
         return [
             [
-                'invalid', 
+                'invalid',
                 array(
                     "Paths" => array(
                         "Quantity" => 0,
